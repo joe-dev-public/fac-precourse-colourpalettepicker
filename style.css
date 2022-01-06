@@ -1,3 +1,10 @@
 * {
     box-sizing: border-box;
 }
+
+#colour-1, #colour-2 {
+    background-color: grey;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+}
