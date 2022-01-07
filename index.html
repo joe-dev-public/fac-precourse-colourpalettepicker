@@ -10,22 +10,68 @@
     <head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Title</title>
+
+        <title>Colour palette picker</title>
+
         <link href="style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+
         <script src="index.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
     <body>
 
+
         <h1>Colour palette picker</h1>
 
+
         <input id="generate" type="button" value="Generate" autofocus>
-        <input id="lightness" type="range" min="0" max="100" step="1" value="50">
+
+        <fieldset>
+            <label>
+                Manually set hue:
+                <input id="hue-lock" type="checkbox" value="hue">
+            </label>
+            <label>
+                Hue (0-360):
+                <input id="hue-slider" type="range" min="0" max="360" step="1" value="180" disabled>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label>
+                Manually set saturation:
+                <input id="saturation-lock" type="checkbox" value="saturation">
+            </label>
+            <label>
+                Saturation (0-100%):
+                <input id="saturation-slider" type="range" min="0" max="100" step="1" value="50" disabled>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label>
+                Manually set lightness:
+                <input id="lightness-lock" type="checkbox" value="lightness" checked>
+            </label>
+            <label>
+                Lightness (0-100%):
+                <input id="lightness-slider" type="range" min="0" max="100" step="1" value="50">
+            </label>
+        </fieldset>
+
 
         <div id="colour-1"></div>
         <div id="colour-2"></div>
+
 
         <script>
             window.onload = function() {
